@@ -1,0 +1,99 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix focu: <http://focu.io/schema#> .
+@prefix focudata: <http://focu.io/data#> .
+@prefix dbpedia: <http://dbpedia.org/page/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+focu:University
+  a rdfs:Class;
+  rdfs:label "University"@en. 
+
+focu:Course
+  a rdfs:Class ;
+  rdfs:label "University Courses"@en;
+  rdfs:comment "all the courses"@en.
+
+focu:course_name
+  a rdf:Property ;
+  rdfs:label "Course Name"@en ;
+  rdfs:comment "A name given to the course" ;
+  rdfs:domain focu:Course ;
+  rdfs:range xsd:string .
+
+focu:course_subject
+  a rdf:Property ;
+  rdfs:label "Course Subject"@en ;
+  rdfs:comment "Subject of the course" ;
+  rdfs:domain focu:Course ;
+  rdfs:range xsd:string .
+
+
+focu:course_number
+  a rdf:Property;
+  rdfs:label "Course number"@en;
+  rdfs:comment "code of the subject";
+  rdfs:domain focu:Course;
+  rdfs:range xsd:integer.
+
+focu:course_description
+  a rdf:Property;
+  rdfs:label "Course Description"@en;
+  rdfs:comment "Description of the course";
+  rdfs:domain focu:Course;
+  rdfs:range xsd:string.
+
+focu:Topic
+  a rdfs:Class;
+  rdfs:label "Course Topic"@en;
+  rdfs:comment "All the topics"@en.
+
+focu:Student
+  a rdfs:Class;
+  rdfs:label "Student_class"@en;
+  rdfs:comment "all the students"@en.
+  
+focu:id_number
+  a rdf:Property;
+  rdfs:label "ID Number"@en;
+  rdfs:comment "ID Number of the student";
+  rdfs:domain focu:Student;
+  rdfs:range xsd:string.
+
+focu:isEnrolled
+  a rdf:Property ;
+  rdfs:label "IsEnrolledProperty"@en ;
+  rdfs:comment "A property describing that a Student is enrolled at a University"@en ;
+  rdfs:domain focu:Student ;
+  rdfs:range focu:University.
+
+focu:email  
+  a rdf:Property;
+  rdfs:label "Email"@en;
+  rdfs:comment "Email of the student";
+  rdfs:domain focu:Student;
+  rdfs:range xsd:string.
+
+########################################data###########################
+
+focudata:Concordia
+  a focu:University;
+  foaf:name "Concordia University"@en;
+  owl:SameAs dbpedia:ConcordiaUniversity.
+
+focudata:Intelligent_Systems
+  a focu:Course;
+  foaf:course_name "Intelligent Systems"@en;
+  foaf:course_subject "COMP"@en;
+  foaf:course_number "6741"^^xsd:int;
+  foaf:course_description "Intelligent Systems is COMP course"@en.
+
+focudata:Sukhpreet
+  a focu:Student;
+  foaf:firstName "Sukhpreet";
+  foaf:LastName "Bhatia";
+  foaf:id_number 40083564;
+  foaf:email "sukhpreetsingh027@gmail.com";
+  foaf:isEnrolled focu:University .
