@@ -21,22 +21,36 @@ focu:course_name
   rdfs:label "Course Name"@en ;
   rdfs:comment "A name given to the course" ;
   rdfs:domain focu:Course ;
+  rdfs:domain focu:Topic;
   rdfs:range xsd:string .
 
-focu:course_subject
-  a rdf:Property ;
-  rdfs:label "Course Subject"@en ;
-  rdfs:comment "Subject of the course" ;
-  rdfs:domain focu:Course ;
-  rdfs:range xsd:string .
-
+#########################################removed##############################################
+#focu:course_subject
+ # a rdf:Property ;
+  #rdfs:label "Course Subject"@en ;
+  #rdfs:comment "Subject of the course" ;
+  #rdfs:domain focu:Course ;
+  #rdfs:range xsd:string .
+#########################################removed##############################################
 
 focu:course_number
   a rdf:Property;
   rdfs:label "Course number"@en;
   rdfs:comment "code of the subject";
   rdfs:domain focu:Course;
-  rdfs:range xsd:integer.
+  rdfs:domain focu:grade;
+  rdfs:range xsd:string.
+
+focu:grade
+    a rdfs:Class;
+    rdfs:label "Grade"@en;
+    rdfs:comment "GradesAchieved"@en.
+
+focu:grade_score
+    rdf:type rdf:Property;
+    rdfs:range xsd:string;
+    rdfs:domain focu:grade.
+
 
 focu:course_description
   a rdf:Property;
@@ -67,7 +81,7 @@ focu:isEnrolled
   rdfs:label "IsEnrolledProperty"@en ;
   rdfs:comment "A property describing that a Student is enrolled at a University"@en ;
   rdfs:domain focu:Student ;
-  rdfs:range focu:University.
+  rdfs:range focu:Course.
 
 focu:email  
   a rdf:Property;
@@ -76,19 +90,18 @@ focu:email
   rdfs:domain focu:Student;
   rdfs:range xsd:string.
 
-########################################data###########################
+
+
+########################################data###############################
 
 focudata:Concordia
   a focu:University;
   foaf:name "Concordia University"@en;
-  owl:SameAs dbpedia:ConcordiaUniversity.
+  owl:sameAs dbpedia:Concordia_University.
 
-focudata:Intelligent_Systems
-  a focu:Course;
-  foaf:course_name "Intelligent Systems"@en;
-  foaf:course_subject "COMP"@en;
-  foaf:course_number "6741"^^xsd:int;
-  foaf:course_description "Intelligent Systems is COMP course"@en.
+focudata:grade
+    a focu:grade;
+    foaf:
 
 focudata:Sukhpreet
   a focu:Student;
@@ -96,4 +109,4 @@ focudata:Sukhpreet
   foaf:LastName "Bhatia";
   foaf:id_number 40083564;
   foaf:email "sukhpreetsingh027@gmail.com";
-  foaf:isEnrolled focu:University .
+  foaf:isEnrolled focudata:COMP6741 .
