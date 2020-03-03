@@ -16,6 +16,7 @@ rdf = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
 counter = 0
 
 g = Graph()
+g.parse("KG.ttl", format='n3')
 
 with open('/Automated_KB_Construct.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
@@ -24,19 +25,20 @@ with open('/Automated_KB_Construct.csv') as csv_file:
         counter +=1
         if counter > 2 and counter < 5:
             course_name = URIRef("http://focu.io/data#"+str(row[0]).replace(" ","%"))
-            print(course_name)
+            # print(course_name)
             course_dept = row[1]
             course_number = row[2]
             try:
                 course_description = row[3]
             except:
                 course_description =""
-            print(course_name,course_description,course_dept,course_number)
+            # print(course_name,course_description,course_dept,course_number)
             g.add((course_name, rdf.type, focu.Course))
             g.add((course_name, focu.course_name, Literal(course_name)))
             g.add((course_name, focu.course_subject, Literal(course_dept)))
             g.add((course_name, focu.course_number, Literal(course_number)))
             g.add((course_name, focu.course_description, Literal(course_description)))
-data = (str(g.serialize(format='turtle')).replace('b',''))
-ttl_file.write("\n"+data)
+g.serialize('KG.ttl',format='turtle')
+for items in g:
+    print(items)
 
