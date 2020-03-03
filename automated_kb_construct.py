@@ -1,55 +1,44 @@
-import warnings
-
+from rdflib import Namespace, URIRef
+from rdflib import Literal
+from rdflib import BNode
+from rdflib import Graph
 import requests
-from bs4 import BeautifulSoup
 import csv
-warnings.filterwarnings("ignore")
 
-# faultencoding('ut
-# f8')
+# topics=open("TopicsExtracted2.csv",'r')
+# random_data=open("Random_Stu_data.csv",'r')
+Course_data = open("Automated_KB_Construct.csv", 'r')
+ttl_file = open("KG.ttl","a")
+foaf = Namespace("http://xmlns.com/foaf/0.1/")
+focu = Namespace("http://focu.io/schema#")
+focudata = Namespace("http://focu.io/data#")
+rdf = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+counter = 0
 
-r = requests.get("http://www.concordia.ca/academics/graduate/calendar/current/encs/computer-science-courses.html")
+g = Graph()
+g.parse("KG.ttl", format='n3')
 
-soup=BeautifulSoup(r.content)
-soup_main=soup.find_all("span",{"class":"large-text"})
-#''.join(third_p.find('br').next_siblings)
-Topics_file = open('TopicsExtracted2.csv', 'w', encoding="utf-8")
-
-with open('Automated_KB_Construct.csv', mode='w') as scrapper_file:
-  scrapper_writer = csv.writer(scrapper_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-  scrapper_writer.writerow(["Course Name","Course subject","Course number","Course description"])
-  #scrapper_writer.close()
-counter=0
-for lis in soup_main:
-  counter+=1
-  if counter>34:
-    subject=str(lis.find("b")).replace("<b>","").replace("</b>","").replace("(*)","")
-    name=subject.replace(subject.split()[0],"").replace(subject.split()[1],"").lstrip()
-    subject_act=subject.split()[0]
-    number=subject.split()[1]
-    test_str=str(lis)
-    test_str2=test_str[test_str.find("\n")+1:]
-    description=test_str2.replace("</span>","").replace('<span class="large-text">',"").replace("<i>","").replace("</i>","").replace("</i>","").replace("<br/>","").replace("<b>","").replace("</b>","").lstrip()
-    with open('Automated_KB_Construct.csv', mode='a',encoding="utf-8") as scrapper_file:
-      scrapper_writer = csv.writer(scrapper_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL,lineterminator = '\n')
-      if subject_act=="SOEN" and number=="8901":
-        scrapper_writer.writerow([name,subject_act,number])
-      else:
-        scrapper_writer.writerow([name,subject_act,number,description])
-
-    SearchString = name + description
-    parameters = {"text": SearchString}
-    response = requests.get('https://api.dbpedia-spotlight.org/en/annotate', params=parameters)
-    soup2 = BeautifulSoup(response.text, 'html.parser')
-    lt = soup2.findAll('a')
-    print(response)
-
-    # wr = csv.writer(Topics_file, quoting=csv.QUOTE_MINIMAL)
-
-    with open('TopicsExtracted2.csv', mode='a',encoding="utf-8") as Topics_file:
-      Topics_writer = csv.writer(Topics_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL,lineterminator = '\n')
-      for l in lt:
-        print(l.get_text(), l.get('href'))
-        Topics_writer.writerow([name, l.get_text(), l.get('href')])
-
+with open('/Automated_KB_Construct.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    counter =0
+    for row in csv_reader:
+        counter +=1
+        if counter > 2 and counter < 5:
+            course_name = URIRef("http://focu.io/data#"+str(row[0]).replace(" ","%"))
+            # print(course_name)
+            course_dept = row[1]
+            course_number = row[2]
+            try:
+                course_description = row[3]
+            except:
+                course_description =""
+            # print(course_name,course_description,course_dept,course_number)
+            g.add((course_name, rdf.type, focu.Course))
+            g.add((course_name, focu.course_name, Literal(course_name)))
+            g.add((course_name, focu.course_subject, Literal(course_dept)))
+            g.add((course_name, focu.course_number, Literal(course_number)))
+            g.add((course_name, focu.course_description, Literal(course_description)))
+g.serialize('KG.ttl',format='turtle')
+for items in g:
+    print(items)
 
