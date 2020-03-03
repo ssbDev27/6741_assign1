@@ -1,3 +1,4 @@
+
 from rdflib import Namespace, URIRef
 from rdflib import Literal
 from rdflib import BNode
@@ -41,4 +42,16 @@ with open('/Automated_KB_Construct.csv') as csv_file:
 g.serialize('KG.ttl',format='turtle')
 for items in g:
     print(items)
+=======
+from rdflib import Namespace
+from rdflib import Literal
+from rdflib import BNode
+import requests
+import csv
+def kg_builder(g):
+    topics=open("TopicsExtracted2.csv",'r')
+    random_data=open("Random_Stu_data.csv",'r')
+    Course_data=open("Automated_KB_Construct.csv",'r')
 
+
+   
