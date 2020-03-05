@@ -19,7 +19,7 @@ counter = 0
 g = Graph()
 g.parse("KG.ttl", format='n3')
 
-with open('/Automated_KB_Construct.csv') as csv_file:
+with open('Automated_KB_Construct.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     counter =0
     for row in csv_reader:
@@ -42,7 +42,7 @@ with open('/Automated_KB_Construct.csv') as csv_file:
 g.serialize('KG.ttl',format='turtle')
 for items in g:
     print(items)
-=======
+
 from rdflib import Namespace
 from rdflib import Literal
 from rdflib import BNode
