@@ -19,7 +19,7 @@ counter = 0
 g = Graph()
 g.parse("KG.ttl", format='n3')
 
-with open('Automated_KB_Construct.csv') as csv_file:
+with open('/Automated_KB_Construct.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     counter =0
     for row in csv_reader:
@@ -34,12 +34,13 @@ with open('Automated_KB_Construct.csv') as csv_file:
             except:
                 course_description =""
             # print(course_name,course_description,course_dept,course_number)
-            g.add((course_name, rdf.type, focu.Course))
-            g.add((course_name, focu.course_name, Literal(course_name)))
+            g.add((course_name, rdf.type, focu.course_name))
+            # g.add((course_name, focu.course_name_is, Literal(course_name)))
             g.add((course_name, focu.course_subject, Literal(course_dept)))
             g.add((course_name, focu.course_number, Literal(course_number)))
             g.add((course_name, focu.course_description, Literal(course_description)))
 g.serialize('KG.ttl',format='turtle')
+
 for items in g:
     print(items)
 
