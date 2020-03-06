@@ -12,7 +12,6 @@ focu:Course a rdfs:Class ;
     rdfs:label "University Courses"@en ;
     rdfs:comment "all the courses"@en .
 
-
 focu:Student a rdfs:Class ;
     rdfs:label "Student_class"@en ;
     rdfs:comment "all the students"@en .
@@ -37,22 +36,26 @@ focudata:Concordia a focu:University ;
 focu:course_description a rdf:Property ;
     rdfs:label "Course Description"@en ;
     rdfs:comment "Description of the course" ;
-    rdfs:domain focu:Course ;
+    rdfs:domain focu:course_name ;
     rdfs:range xsd:string .
 
-focu:course_name a rdf:Property ;
+focu:course_name_is a rdf:Property ;
     rdfs:label "Course Name"@en ;
     rdfs:comment "A name given to the course" ;
-    rdfs:domain focu:Course,
+    rdfs:domain focu:course_name,
         focu:Topic ;
     rdfs:range xsd:string .
 
 focu:course_number_is a rdf:Property ;
     rdfs:label "Course number"@en ;
     rdfs:comment "code of the subject" ;
-    rdfs:domain focu:Course,
+    rdfs:domain focu:course_name,
         focu:grade ;
     rdfs:range xsd:String .
+
+focu:course_subject a rdf:Property ;
+    rdfs:domain focu:course_name ;
+    rdfs:range xsd:string .
 
 focu:email a rdf:Property ;
     rdfs:label "Email"@en ;
@@ -70,7 +73,7 @@ focu:grade_score a rdf:Property ;
     rdfs:range xsd:string .
 
 focu:grades_achieved a rdf:Property ;
-    rdfs:domain focu:course_name;
+    rdfs:domain focu:course_name ;
     rdfs:range xsd:string .
 
 focu:id_number a rdf:Property ;
@@ -90,10 +93,6 @@ focu:student_enrolled a rdf:Property ;
     rdfs:domain focu:Student ;
     rdfs:range focu:course_name .
 
-focu:course_subject rdf:type rdf:Property;
-    rdfs:domain focu:course_name ;
-    rdfs:range xsd:string .
-
 focu:student_id a rdf:Property ;
     rdfs:label "student's id number"@en ;
     rdfs:domain rdf:Student ;
@@ -104,3 +103,11 @@ focu:student_name a rdf:Property ;
     rdfs:domain rdf:Course ;
     rdfs:range xsd:string .
 
+
+focu:course_name a rdf:Class .
+
+focu:generated_topic_link a rdf:Property;
+    rdfs:label "Generated Topic Link"@en;
+    rdfs:comment "Sub topic link generated from course description";
+    rdfs:domain focu:Topic;
+    rdfs:range xsd:string .
