@@ -27,17 +27,18 @@ with open('StudentRecord.csv',"r") as student_file:
             course_name = URIRef("http://focu.io/data#"+str(row[4]).replace(" ","%"))
             student_grade = row[5]
             student_enrolled_term = row[6]
-            b_node = BNode()
+            b_node = BNode("data")
             print("student_enrolled_term")
             g.add((student_name,rdf.type, focu.student))
             g.add((student_name, focu.student_name, Literal(student_name)))
             g.add((student_name, focu.student_id, Literal(student_id)))
+            g.add((b_node,focu.course_name_is,course_name))
             g.add((b_node, focu.course_number_is, Literal(student_enrolled_snumber)))
             g.add((b_node, focu.course_subject, Literal(student_enrolled_subject)))
             g.add((b_node, focu.grades_achieved, Literal(student_grade)))
             g.add((b_node, focu.enrolled_term, Literal(student_enrolled_term)))
             g.add((student_name, focu.student_enrolled, b_node))
 
-g.serialize('out.ttl',format='turtle')
+g.serialize('KG.ttl',format='turtle')
 for items in g:
     print(items)
