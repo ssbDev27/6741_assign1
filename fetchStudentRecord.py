@@ -27,7 +27,7 @@ with open('StudentRecord.csv',"r") as student_file:
             course_name = URIRef("http://focu.io/data#"+str(row[4]).replace(" ","%"))
             student_grade = row[5]
             student_enrolled_term = row[6]
-            b_node = BNode("data")
+            b_node = BNode()
             print("student_enrolled_term")
             g.add((student_name,rdf.type, focu.student))
             g.add((student_name, focu.student_name, Literal(student_name)))
