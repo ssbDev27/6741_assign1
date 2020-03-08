@@ -17,12 +17,44 @@ sparql1 = """SELECT ?description WHERE {
 ?course focu:course_description ?description
 }"""
 
-# Infer the terms of subject in which NLP was offered
-sparql2 ="""
-Select ?terms WHERE{
+sparql2 = """
 
+SELECT (COUNT(*) as ?Triples) 
+WHERE 
+      { ?s ?p ?o } 
+"""
+sparql3= """
+Select ?topic ?link
+Where{ focudata:Applied_Artificial_Intelligence_ focu:course_topics ?topic .
+?topic rdf:seeAlso ?link .
+}"""
+# Infer the terms of subject in which NLP was offered
+sparql4 ="""Select ?course ?grade WHERE{
+<http://focu.io/data#Pulkit%Ghai> focu:student_enrolled ?x .
+?x focu:course_name_is ?course .
+?x focu:grades_achieved ?grade .
 }
 """
-q = g.query(sparql1)
+
+sparql5 ="""Select Distinct ?students   WHERE{
+?students focu:student_enrolled ?x .
+?x focu:course_name_is ?course.
+?course focu:course_topics focudata:distributed_systems .
+?x focu:grades_achieved ?grade .
+ FILTER(?grade != "F") .
+}
+"""
+
+sparql6 ="""Select Distinct ?topic  WHERE{
+<http://focu.io/data#Pulkit%Ghai> focu:student_enrolled ?x .
+?x focu:course_name_is ?course.
+?course focu:course_topics ?topic .
+?x focu:grades_achieved ?grade .
+ FILTER(?grade != "F") .
+}
+"""
+
+
+q = g.query(sparql2)
 for qS in q:
     print(qS)
