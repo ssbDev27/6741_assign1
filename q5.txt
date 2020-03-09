@@ -1,0 +1,10 @@
+Select Distinct ?firstName ?lastName   WHERE{
+?students rdf:type focu:Student .
+?students foaf:familyName ?lastName .
+?students foaf:givenName ?firstName .
+?students focu:student_enrolled ?c .
+?c foaf:name ?course .
+?course focu:course_topics focudata:distributed_systems .
+?x focu:grades_achieved ?grade .
+ FILTER(?grade != "F") .
+}

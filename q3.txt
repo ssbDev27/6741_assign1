@@ -1,0 +1,4 @@
+Select ?topic ?link
+Where{ <http://focu.io/data#Applied%Artificial%Intelligence%> focu:course_topics ?topic .
+?topic rdf:seeAlso ?link .
+}

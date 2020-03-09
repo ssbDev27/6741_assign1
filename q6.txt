@@ -1,0 +1,7 @@
+Select Distinct ?topic  WHERE{
+<http://focu.io/data#Pulkit%Ghai> focu:student_enrolled ?x .
+?x focu:course_name_is ?course.
+?course focu:course_topics ?topic .
+?x focu:grades_achieved ?grade .
+ FILTER(?grade != "F") .
+}

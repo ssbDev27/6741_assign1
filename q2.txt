@@ -1,0 +1,11 @@
+SELECT DISTINCT(COUNT(?student) as ?S) (COUNT(?course) as ?C)
+(COUNT(?topic) as ?t)
+WHERE{
+      { ?student rdf:type focu:Student .}
+      UNION
+      {?course rdf:type focu:Course .}
+UNION{
+?topic rdf:type foaf:topic .
+}
+      }
+
