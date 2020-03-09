@@ -33,9 +33,8 @@ with open('/Automated_KB_Construct.csv') as csv_file:
                 course_description = row[3]
             except:
                 course_description =""
-            # print(course_name,course_description,course_dept,course_number)
-            g.add((course_name, rdf.type, focu.course_name))
-            # g.add((course_name, focu.course_name_is, Literal(course_name)))
+            g.add((course_name, rdf.type, focu.Course))
+            g.add((course_name,foaf.name,Literal(str(row[0]))))
             g.add((course_name, focu.course_subject, Literal(course_dept)))
             g.add((course_name, focu.course_number, Literal(course_number)))
             g.add((course_name, focu.course_description, Literal(course_description)))
@@ -44,11 +43,7 @@ g.serialize('KG.ttl',format='turtle')
 for items in g:
     print(items)
 
-from rdflib import Namespace
-from rdflib import Literal
-from rdflib import BNode
-import requests
-import csv
+
 def kg_builder(g):
     topics=open("TopicsExtracted2.csv",'r')
     random_data=open("Random_Stu_data.csv",'r')
