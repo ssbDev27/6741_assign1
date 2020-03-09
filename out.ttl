@@ -113,7 +113,7 @@ focu:student_enrolled a rdf:Property ;
     rdfs:range focu:Course .
 
 focu:student_id a rdf:Property ;
-    rdf:type owl:InverseFunctionalProperty ;
+    rdf:type owl:FunctionalProperty ;
     rdfs:label "student's id number"@en ;
     rdfs:domain rdf:Student ;
     rdfs:range xsd:Integer .
