@@ -18,7 +18,16 @@ sparql4 = open("q4.txt","r").read()
 sparql5 =open("q5.txt","r").read()
 sparql6 =open("q6.txt","r").read()
 
+sparql =[sparql1,sparql2,sparql3,sparql4,sparql5,sparql6]
 
-q = g.query(sparql5)
-for qS in q:
-    print(qS)
+counter =1
+
+for query in sparql:
+    #print(query)
+    results = g.query(query)
+    for row in results:
+        filename =str("q"+str(counter)+"-out.ttl")
+        with open(filename,mode='a') as file:
+            file.write(str(row))
+    counter+=1
+
