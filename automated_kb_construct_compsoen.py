@@ -51,5 +51,3 @@ for lis in soup_main:
       for l in lt:
         print(l.get_text(), l.get('href'))
         Topics_writer.writerow([name, l.get_text(), l.get('href')])
-
-
