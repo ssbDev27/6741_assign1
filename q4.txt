@@ -2,8 +2,10 @@ Select ?course ?grade
 WHERE{
 ?x rdf:type focu:Student .
 ?x foaf:familyName ?name .
+?x foaf:givenName ?fname .
 ?x focu:student_enrolled ?c .
 ?c foaf:name ?course .
 ?c  focu:grades_achieved ?grade .
-FILTER(?name = "Ghai")
+FILTER(?name = "Ghai" || ?fname ="Pulkit")
+
 }

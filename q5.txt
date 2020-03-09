@@ -5,6 +5,6 @@ Select Distinct ?firstName ?lastName   WHERE{
 ?students focu:student_enrolled ?c .
 ?c foaf:name ?course .
 ?course focu:course_topics focudata:distributed_systems .
-?x focu:grades_achieved ?grade .
+?c focu:grades_achieved ?grade .
  FILTER(?grade != "F") .
 }

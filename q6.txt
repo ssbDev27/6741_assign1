@@ -1,7 +1,11 @@
-Select Distinct ?topic  WHERE{
-<http://focu.io/data#Pulkit%Ghai> focu:student_enrolled ?x .
-?x focu:course_name_is ?course.
+Select Distinct ?topic
+WHERE{
+?x rdf:type focu:Student .
+?x foaf:givenName ?name .
+?x foaf:familyName ?lname .
+?x focu:student_enrolled ?y .
+?y foaf:name ?course.
 ?course focu:course_topics ?topic .
-?x focu:grades_achieved ?grade .
- FILTER(?grade != "F") .
+?y focu:grades_achieved ?grade .
+ FILTER(?name ="Pulkit" || ?lname ="Ghai" || ?grade != "F")
 }

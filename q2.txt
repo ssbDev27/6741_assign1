@@ -1,11 +1,12 @@
-SELECT DISTINCT(COUNT(?student) as ?S) (COUNT(?course) as ?C)
-(COUNT(?topic) as ?t)
+SELECT DISTINCT (COUNT(?studentid) as ?tag) (COUNT(?course) as ?ctag) (COUNT(?topic) as ?stag)
 WHERE{
-      { ?student rdf:type focu:Student .}
+      {SELECT DISTINCT ?studentid WHERE{ ?s rdf:type focu:Student .
+      ?s focu:student_id ?studentid .
+      }
+      }
       UNION
       {?course rdf:type focu:Course .}
 UNION{
 ?topic rdf:type foaf:topic .
 }
       }
-
