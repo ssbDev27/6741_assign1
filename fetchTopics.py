@@ -16,14 +16,14 @@ g.parse('KG.ttl',format='n3')
 for i in range(len(data)):
 
     course_name = URIRef("http://focu.io/data#"+str(data[i][0]).replace(" ","%"))
-    g.add((course_name, rdf.type, focu.course_name))
+    g.add((course_name, rdf.type, focu.Course))
     for r in range(len(data)):
         if data[i][0]==data[r][0]:
             topic_generated = URIRef("http://focu.io/data#" + str(data[r][1]).replace(" ", "_"))
             print(topic_generated)
             topic_generated_link = data[r][2]
             topic = URIRef(topic_generated_link)
-            g.add((topic_generated, rdf.type, focu.Topic))
+            g.add((topic_generated, rdf.type, foaf.topic))
             g.add((topic_generated, rdf.seeAlso, topic))
             g.add((course_name, focu.course_topics, topic_generated))
     i = r;
