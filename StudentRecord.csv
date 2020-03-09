@@ -1,10 +1,12 @@
-﻿Student ID,First Nam,Last Name,email,Completed subject,Completed number,Course name,Grades,Term
+Student ID,First Nam,Last Name,email,Completed subject,Completed number,Course name,Grades,Term
+44008968,Farzi ,Singh,Fs@gmail.com,COMP,6231,Distributed System Design,F,Fall'19
+44008968,Farzi ,Singh,Fs@gmail.com,COMP,6231,Parallel Programming,B-,Winter'20
+44008968,Farzi ,Singh,Fs@gmail.com,,COMP,6331,Advanced Game Development ,B,Summer'20
 44008969,Pulkit ,Ghai,pg@gmail.com,COMP,6231,Distributed System Design,A-,Fall'19
 44008969,Pulkit ,Ghai,pg@gmail.com,COMP,6281,Parallel Programming ,B,Fall'19
 44008969,Pulkit ,Ghai,pg@gmail.com,COMP,6751,Natural Language Analysis,B+,Winter'20
 44008969,Pulkit ,Ghai,pg@gmail.com,SOEN,6791,Information Retrieval and Web Search ,A-,Winter'20
 44008969,Pulkit ,Ghai,pg@gmail.com,SOEN,6721,Applied Artificial Intelligence ,B,Summer'20
-44008968,Farzi ,Singh,Fs@gmail.com,COMP,6231,Distributed System Design,F,Fall'19
 44008967,Sukhpreet,Singh,SS@gmail.com,COMP,6231,Distributed System Design,B+,Fall'19
 44008967,Sukhpreet,Singh,SS@gmail.com,COMP,6281,Parallel Programming ,A-,Fall'19
 44008967,Sukhpreet,Singh,SS@gmail.com,COMP,6751,Natural Language Analysis,A-,Winter'20
@@ -25,3 +27,10 @@
 58751236,kristy,lincon,KL@gmail.com,SOEN,6461,Software Design Methodologies,B-,Fall'20
 58751236,kristy,lincon,KL@gmail.com,SOEN,6501,Programming Competency Test,B,Fall'20
 58751236,kristy,lincon,KL@gmail.com,SOEN,6761,Multimedia Computing,B,Fall'20
+44008975,Chris,Gayle,cg@gmail.com,COMP,6321,Machine Learning,A-,Fall'19
+44008975,Chris,Gayle,cg@gmail.com,SOEN,6501,Programming Competency Test,C,Fall'19
+44008975,Chris,Gayle,cg@gmail.com,COMP,6751,Natural Language Analysis,A+,Winter'20
+44008975,Chris,Gayle,cg@gmail.com,SOEN,6761,Multimedia Computing,B,Summer'20
+44008977,Virat,Kohli,vk@gmail.com,BLDG,6061,Structural Systems for Buildings,A-,Fall'19
+44008977,Virat,Kohli,vk@gmail.com,BLDG,6221,Design of Computer-Aided Systems in Building and Civil Engineering ,F,Winter'20
+44008977,Virat,Kohli,vk@gmail.com,BLDG,6111,Computer-Aided Building Operation,C,Summer'20
