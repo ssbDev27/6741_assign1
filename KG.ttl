@@ -2409,6 +2409,7 @@ focu:course_description a rdf:Property ;
     rdfs:comment "Description of the course" ;
     rdfs:domain focu:Course ;
     rdfs:range xsd:string .
+    rdfs:range xsd:string .
 
 focu:course_name_is a rdf:Property ;
     rdfs:label "Course Name"@en ;

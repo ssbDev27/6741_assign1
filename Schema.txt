@@ -1,0 +1,64 @@
+@prefix dbpedia: <http://dbpedia.org/page/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix focu: <http://focu.io/schema#> .
+@prefix focudata: <http://focu.io/data#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix v: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+foaf:University
+rdf:type foaf:Organization .
+
+focu:Program rdf:type rdf:Property;
+    rdfs:label "ProgramsOffered"@en;
+    rdfs:comment "Graduate or Undergraduate"@en ;
+    rdfs:domain focu:Course;
+    rdfs:range xsd:string .
+
+focu:Course rdf:type rdfs:Class;
+    rdfs:subClassOf foaf:Topic;
+    rdfs:label "Coursed offered";
+    rdfs:comment "Courses" .
+
+focu:Course_Subject rdf:type rdf:Property ;
+    rdfs:label "Course Programme"@en ;
+    rdfs:domain foaf:Course ;
+    rdfs:range xsd:string .
+
+focu:Course_number rdf:type rdf:Property ;
+    rdfs:label "Course Number"@en;
+    rdfs:domain foaf:Course ;
+    rdfs:range xsd:integer .
+
+focu:Description rdf:type rdf:Property ;
+    rdfs:label "Course description"@en ;
+    rdfs:domain foaf:Course ;
+    rdfs:range xsd:string .
+
+focu:Student a rdfs:Class ;
+    rdfs:label "Student_class"@en ;
+    rdfs:comment "all the students"@en .
+focu:student_id a rdf:Property,
+    owl:FunctionalProperty ;
+    rdfs:label "student's id number"@en ;
+    rdfs:domain rdf:Student ;
+    rdfs:range xsd:Integer .
+focu:grades_achieved a rdf:Property ;
+    rdfs:label "grades"@en ;
+    rdfs:comment "Grades achieved in the course." ;
+    rdfs:domain focu:Course ;
+    rdfs:range xsd:string .
+focu:enrolled_term a rdf:Property ;
+    rdfs:label "term enrolled" ;
+    rdfs:domain focu:Course ;
+    rdfs:range xsd:string .
+focu:student_enrolled a rdf:Property ;
+    rdfs:label "student's id number"@en ;
+    rdfs:domain focu:Student ;
+    rdfs:range focu:Course .
+focu:course_topics a rdf:Property ;
+    rdfs:domain focu:Course ;
+    rdfs:range foaf:topic .

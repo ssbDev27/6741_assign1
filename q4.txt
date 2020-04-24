@@ -5,7 +5,7 @@ WHERE{
 ?x foaf:givenName ?fname .
 ?x focu:student_enrolled ?c .
 ?c foaf:name ?course .
-?c  focu:grades_achieved ?grade .
+?c focu:grades_achieved ?grade .
 FILTER(?name = "Ghai" || ?fname ="Pulkit")
 
 }

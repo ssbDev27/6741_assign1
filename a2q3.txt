@@ -1,0 +1,13 @@
+SELECT DISTINCT ?student
+ WHERE{
+ ?student rdf:type focu:Student .
+ ?student foaf:familyName ?lname .
+ ?student foaf:givenName ?fname .
+ ?student focu:student_enrolled ?x .
+ ?x foaf:name ?course .
+ ?courses focu:course_topics ?topic .
+ ?topic foaf:name ?name .
+ FILTER(?lname ="Ghai" && ?fname ="Pulkit" && ?name = "distributed_computing")
+
+
+ }

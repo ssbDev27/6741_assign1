@@ -1,0 +1,10 @@
+SELECT DISTINCT ?cname
+
+ WHERE{
+ ?courses rdf:type focu:Course .
+ ?courses foaf:name ?cname .
+ ?courses focu:course_topics ?topic .
+ ?topic foaf:name ?name .
+  FILTER(?name ='concurrency_control' )
+
+ }

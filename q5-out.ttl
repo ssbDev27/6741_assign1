@@ -1,0 +1,1 @@
+(rdflib.term.Literal('Pulkit'), rdflib.term.Literal('Ghai'))(rdflib.term.Literal('Alice'), rdflib.term.Literal('down'))(rdflib.term.Literal('Sukhpreet'), rdflib.term.Literal('Singh'))

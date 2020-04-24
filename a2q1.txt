@@ -1,0 +1,10 @@
+SELECT ?des
+ WHERE{
+ ?course rdf:type focu:Course .
+ ?course focu:Description ?des .
+ ?course focu:Course_Subject ?sub .
+ ?course focu:Course_number ?num .
+ FILTER(?sub = "ACCO" && ?num = '400')
+
+
+ }

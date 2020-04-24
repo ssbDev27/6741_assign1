@@ -1,0 +1,1839 @@
+@prefix dbpedia: <http://dbpedia.org/page/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix focu: <http://focu.io/schema#> .
+@prefix focudata: <http://focu.io/data#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+focu:Course a rdfs:Class ;
+    rdfs:label "University Courses"@en ;
+    rdfs:comment "all the courses"@en .
+
+focu:Student a rdfs:Class ;
+    rdfs:label "Student_class"@en ;
+    rdfs:comment "all the students"@en .
+
+focu:Topic a rdfs:Class ;
+    rdfs:label "Course Topic"@en ;
+    rdfs:comment "All the topics"@en .
+
+focu:University a rdfs:Class ;
+    rdfs:label "University"@en .
+
+focu:grade a rdfs:Class ;
+    rdfs:label "Grade"@en ;
+    rdfs:comment "GradesAchieved"@en .
+
+focudata:Advanced_3D_Graphics_for_Game_Programming a focu:course_name ;
+    focu:course_topics <http://focu.io/data#3D_graphics>,
+        focudata:application_architecture,
+        focudata:collision_detection,
+        focudata:occlusion_culling,
+        focudata:photorealism,
+        focudata:physics,
+        focudata:pipeline,
+        focudata:software_engineering .
+
+focudata:Advanced_Analysis_of_Algorithms a focu:course_name ;
+    focu:course_topics focudata:Amortized_analysis,
+        focudata:COMP .
+
+focudata:Advanced_Database_Technology_and_Applications a focu:course_name ;
+    focu:course_topics focudata:Data_mining,
+        focudata:Data_warehouse,
+        focudata:Information_integration,
+        focudata:OLAP,
+        focudata:Query_processing,
+        focudata:XML,
+        focudata:data_management,
+        focudata:multimedia,
+        focudata:optimization .
+
+focudata:Advanced_Game_Development_ a focu:course_name ;
+    focu:course_topics <http://focu.io/data#3D>,
+        focudata:AI,
+        focudata:Artificial_Intelligence,
+        focudata:Game_engine,
+        focudata:collision_detection,
+        focudata:computer,
+        focudata:mobile_gaming,
+        focudata:pathfinding .
+
+focudata:Advanced_Image_Processing a focu:course_name ;
+    focu:course_topics focudata:Bayesian_inference,
+        focudata:COMP,
+        focudata:Digital_image_processing,
+        focudata:Markov_random_field,
+        focudata:diffusion,
+        focudata:energy,
+        focudata:inpainting,
+        focudata:level_set_method,
+        focudata:morphological,
+        focudata:multi-resolution_analysis,
+        focudata:partial_differential_equation,
+        focudata:variational_methods,
+        focudata:wavelet .
+
+focudata:Advanced_Pattern_Recognition_ a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:Pattern_Recognition,
+        focudata:Pattern_recognition,
+        focudata:data_acquisition,
+        focudata:expert_systems,
+        focudata:feature_extraction,
+        focudata:neural_networks,
+        focudata:pattern_recognition,
+        focudata:principal_component_analysis .
+
+focudata:Advanced_Programming_Practices a focu:course_name ;
+    focu:course_topics focudata:Self-documenting_code,
+        focudata:Software_configuration_management,
+        focudata:code_reuse,
+        focudata:concurrency,
+        focudata:fault_tolerance,
+        focudata:multi-threading,
+        focudata:unit_tests .
+
+focudata:Advanced_Rendering_and_Animation a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:computer_graphics .
+
+focudata:Advanced_Software_Architectures a focu:course_name ;
+    focu:course_topics <http://focu.io/data#Model_Driven_Architecture_(MDA)>,
+        focudata:SOA,
+        focudata:Service_Oriented_Architecture,
+        focudata:cloud_computing,
+        focudata:design_patterns .
+
+focudata:Algorithm_Design_Techniques a focu:course_name ;
+    focu:course_topics focudata:NP-complete,
+        focudata:String_matching,
+        focudata:algorithm,
+        focudata:branch-and-bound,
+        focudata:combinatorial,
+        focudata:complexity_analysis,
+        focudata:dynamic_programming,
+        focudata:graph .
+
+focudata:Animation_for_Computer_Games_ a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:free-form_deformation,
+        focudata:interpolation,
+        focudata:inverse_kinematics,
+        focudata:motion_control,
+        focudata:pipeline,
+        focudata:traditional_animation .
+
+focudata:Applied_Artificial_Intelligence_ a focu:course_name ;
+    focu:course_topics focudata:Applied_Artificial_Intelligence,
+        focudata:Artificial_Intelligence,
+        focudata:automated_reasoning,
+        focudata:heuristic,
+        focudata:knowledge_representation,
+        focudata:recurrent_neural_networks .
+
+focudata:Bioinformatics_Algorithms a focu:course_name ;
+    focu:course_topics <http://focu.io/data#3D>,
+        focudata:Bioinformatics,
+        focudata:bioinformatics,
+        focudata:dynamic_programming,
+        focudata:expression,
+        focudata:gene,
+        focudata:machine_learning,
+        focudata:multiple_sequence_alignment,
+        focudata:phylogeny,
+        focudata:secondary_structure_prediction,
+        focudata:sequence_alignment,
+        focudata:simulated_annealing .
+
+focudata:Bioinformatics_Databases_and_Systems a focu:course_name ;
+    focu:course_topics focudata:Bioinformatics,
+        focudata:bioinformatics,
+        focudata:data_management,
+        focudata:database,
+        focudata:knowledge_management .
+
+focudata:Combinatorial_Algorithms a focu:course_name ;
+    focu:course_topics focudata:combinatorial,
+        focudata:combinatorics,
+        focudata:graph_theory .
+
+focudata:Comparative_Study_of_Programming_Languages a focu:course_name ;
+    focu:course_topics focudata:dynamic_typing .
+
+focudata:Compiler_Design_ a focu:course_name ;
+    focu:course_topics focudata:code_optimization,
+        focudata:lexical_analysis,
+        focudata:parsing,
+        focudata:syntax-directed_translation .
+
+focudata:Computational_Geometry a focu:course_name ;
+    focu:course_topics focudata:Delaunay,
+        focudata:Voronoi,
+        focudata:binary,
+        focudata:computer_aided_design,
+        focudata:computer_graphics,
+        focudata:convex,
+        focudata:mesh_generation,
+        focudata:motion_planning,
+        focudata:plane_sweep,
+        focudata:point_location,
+        focudata:polygon_triangulation,
+        focudata:range_searching,
+        focudata:robot,
+        focudata:triangulations .
+
+focudata:Computer_Networks_and_Protocols a focu:course_name ;
+    focu:course_topics focudata:IPv6,
+        focudata:Internet_Protocol,
+        focudata:Network_security,
+        focudata:Packet_switching,
+        focudata:TCP,
+        focudata:UDP,
+        focudata:error_detection,
+        focudata:flow_control,
+        focudata:multicasting .
+
+focudata:Computer_Vision_ a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:Computer_Vision,
+        focudata:OpenCV,
+        focudata:computer_vision .
+
+focudata:Concordia a focu:University ;
+    owl:sameAs dbpedia:Concordia_University ;
+    foaf:name "Concordia University"@en .
+
+focudata:Cryptography_and_Data_Security a focu:course_name ;
+    focu:course_topics focudata:Advanced_Encryption_Standard,
+        focudata:COMP,
+        focudata:Cryptographic_hash_functions,
+        focudata:Cryptography,
+        focudata:Information_theory,
+        focudata:Key_distribution,
+        focudata:Rijndael,
+        focudata:access_control,
+        focudata:authentication,
+        focudata:challenge-response_authentication,
+        focudata:confidentiality,
+        focudata:cryptographic,
+        focudata:cryptography,
+        focudata:data_integrity,
+        focudata:digital,
+        focudata:encryption,
+        focudata:non-repudiation,
+        focudata:symmetric-key .
+
+focudata:Database_Systems_Principles a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:Incomplete,
+        focudata:deductive_database,
+        focudata:optimization .
+
+focudata:Digital_Geometric_Modelling a focu:course_name ;
+    focu:course_topics <http://focu.io/data#3D>,
+        focudata:computer-aided_design,
+        focudata:digital,
+        focudata:digital_geometry,
+        focudata:geometry,
+        focudata:pipeline,
+        focudata:reverse_engineering,
+        focudata:spline,
+        focudata:triangle,
+        focudata:triangle_mesh,
+        focudata:wide_range .
+
+focudata:Discrete_Mathematics_of_Paul_Erdös a focu:course_name ;
+    focu:course_topics focudata:Computer_Science,
+        focudata:Discrete_Mathematics,
+        focudata:Extremal_graph_theory,
+        focudata:Paul_Erdös,
+        focudata:Ramsey,
+        focudata:Random_graphs,
+        focudata:Van,
+        focudata:conjecture,
+        focudata:graph_colouring,
+        focudata:probabilistic_method,
+        focudata:theorem .
+
+focudata:Distributed_System_Design a focu:course_name ;
+    focu:course_topics focudata:CORBA,
+        focudata:Client-server,
+        focudata:communication,
+        focudata:concurrency,
+        focudata:concurrency_control,
+        focudata:distributed_systems,
+        focudata:fault-tolerant,
+        focudata:fault_tolerance,
+        focudata:high_availability,
+        focudata:interprocess_communication,
+        focudata:remote_procedure_call,
+        focudata:scalability,
+        focudata:server .
+
+focudata:Formal_Methods a focu:course_name ;
+    focu:course_topics focudata:Software_development,
+        focudata:code_generation,
+        focudata:debugging,
+        focudata:finite-state,
+        focudata:formal_methods,
+        focudata:formal_specification,
+        focudata:process_model,
+        focudata:software_life-cycle,
+        focudata:type_checking .
+
+focudata:Foundations_of_the_Semantic_Web a focu:course_name ;
+    focu:course_topics <http://focu.io/data#Extensible_Markup_Language_(XML)>,
+        <http://focu.io/data#Resource_Description_Framework_(RDF)>,
+        focudata:Semantic_Web,
+        <http://focu.io/data#Web_Ontology_Language_(OWL)>,
+        <http://focu.io/data#World_Wide_Web_Consortium_(W3C)>,
+        focudata:ontologies,
+        focudata:ontology,
+        focudata:schema .
+
+focudata:Graduate_Seminar_in_Computer_Science a focu:course_name ;
+    focu:course_topics <http://focu.io/data#pass/fail> .
+
+focudata:Human_Computer_Interface_Design_ a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:Task_analysis,
+        focudata:User-centered_design,
+        focudata:User_interface,
+        focudata:User_interface_design,
+        focudata:human_computer .
+
+focudata:Image_Processing__ a focu:course_name ;
+    focu:course_topics focudata:Hough_transform,
+        focudata:edge_detection,
+        focudata:frequency_domain,
+        focudata:histogram,
+        focudata:image_compression,
+        focudata:image_enhancement,
+        focudata:image_segmentation,
+        focudata:thresholding,
+        focudata:wavelet_transform .
+
+focudata:Information_Retrieval_and_Web_Search_ a focu:course_name ;
+    focu:course_topics focudata:Boolean,
+        focudata:Information_Retrieval,
+        focudata:PageRank,
+        focudata:Relevance_feedback,
+        focudata:Tokenization,
+        focudata:Weighting,
+        focudata:XML,
+        focudata:algorithm,
+        focudata:link_analysis,
+        focudata:query_expansion,
+        focudata:spam_filtering,
+        focudata:vector_space .
+
+focudata:Intelligent_Systems_ a focu:course_name ;
+    focu:course_topics focudata:Intelligent_Systems,
+        focudata:Knowledge_representation,
+        focudata:blackboard,
+        focudata:conflict_resolution .
+
+focudata:Introduction_to_Knowledge-Base_Systems a focu:course_name ;
+    focu:course_topics focudata:first-order_logic,
+        focudata:knowledge_representation,
+        focudata:logic_programming,
+        focudata:relational_algebra,
+        focudata:relational_calculus .
+
+focudata:Large-Scale_Optimization a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:DC,
+        focudata:Heuristics,
+        focudata:Lagrangian_Relaxation,
+        focudata:biconvex_optimization,
+        focudata:bilinear,
+        focudata:branch-and-bound,
+        focudata:continuous_optimization,
+        focudata:convex,
+        focudata:integer,
+        focudata:non-linear_programming,
+        focudata:nonlinear,
+        focudata:optimization .
+
+focudata:Mobile_Computing_and_Wireless_Networks a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:MAN,
+        focudata:PAN,
+        focudata:mobile_computing,
+        focudata:sensor_networks,
+        focudata:topology,
+        focudata:wireless .
+
+focudata:Multimedia_Computing a focu:course_name ;
+    focu:course_topics <http://focu.io/data#3D>,
+        focudata:computer_science,
+        focudata:multimedia,
+        focudata:software_engineering .
+
+focudata:Natural_Language_Analysis a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:English,
+        focudata:compositional_semantics,
+        focudata:natural_language_processing,
+        focudata:parsing,
+        focudata:text_mining .
+
+focudata:Numerical_Analysis_of_Nonlinear_Equations a focu:course_name ;
+    focu:course_topics focudata:Numerical_Analysis,
+        focudata:asymptotic_stability,
+        focudata:discretization,
+        focudata:homotopy,
+        focudata:nonlinear,
+        focudata:numerical_analysis,
+        focudata:numerical_simulation,
+        focudata:travelling_wave .
+
+focudata:Parallel_Algorithms_and_Architectures a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:complexity_analysis,
+        focudata:memory .
+
+focudata:Parallel_Programming_ a focu:course_name ;
+    focu:course_topics focudata:Neumann,
+        focudata:Parallel_programming,
+        focudata:commodity,
+        focudata:heterogeneous_computing,
+        focudata:load_balancing,
+        focudata:massively_parallel,
+        focudata:memory,
+        focudata:message-passing,
+        focudata:message_passing,
+        focudata:multi-core,
+        focudata:parallel_processing,
+        focudata:parallel_programming,
+        focudata:scalability .
+
+focudata:Pattern_Recognition_ a focu:course_name ;
+    focu:course_topics focudata:Bayesian_decision_theory,
+        focudata:Feature_extraction,
+        focudata:Pattern_Recognition,
+        focudata:discriminant .
+
+focudata:Programming_Competency_Test a focu:course_name ;
+    focu:course_topics focudata:Applied_Computer_Science,
+        focudata:Software_Engineering .
+
+<http://focu.io/data#Project_and_Report > a focu:course_name ;
+    focu:course_topics focudata:Applied_Computer_Science,
+        focudata:SOEN .
+
+focudata:Semantic_Computing a focu:course_name ;
+    focu:course_topics focudata:Blogosphere,
+        focudata:Collaborative_Filtering,
+        focudata:LOD,
+        focudata:Linked_Open_Data,
+        focudata:Machine_Learning,
+        focudata:Ontologies,
+        focudata:RDF,
+        focudata:RDFS,
+        focudata:SOEN,
+        focudata:SPARQL,
+        focudata:Semantic_Web,
+        focudata:Text_Mining,
+        focudata:The_Web,
+        focudata:business_intelligence,
+        focudata:e-commerce,
+        focudata:e-science,
+        focudata:semantic,
+        focudata:software_development .
+
+focudata:Semantics_of_Programming_Languages a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:Semantics,
+        focudata:distributed_systems,
+        focudata:logic,
+        focudata:model-theoretic,
+        focudata:semantic,
+        focudata:semantics,
+        focudata:temporal_logic .
+
+<http://focu.io/data#Services_Computing:_Foundations,_Design_and_Implementations> a focu:course_name ;
+    focu:course_topics focudata:RESTful,
+        focudata:SOAP,
+        focudata:SOEN,
+        focudata:Service-Oriented_Architecture,
+        focudata:Service_Oriented_Architecture,
+        focudata:Web_services,
+        focudata:process_modelling .
+
+focudata:Software_Comprehension_and_Maintenance a focu:course_name ;
+    focu:course_topics focudata:CASE,
+        focudata:COMP,
+        focudata:code_analysis,
+        focudata:cognitive,
+        focudata:program_comprehension,
+        focudata:reverse_engineering,
+        focudata:software_configuration_management,
+        focudata:software_maintenance,
+        focudata:software_visualization .
+
+focudata:Software_Engineering_Case_Study a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:SOEN,
+        focudata:Software_Engineering .
+
+focudata:Software_Engineering_Processes a focu:course_name ;
+    focu:course_topics focudata:Continuous_integration,
+        focudata:Software_Engineering,
+        focudata:Version_control,
+        focudata:code_review,
+        focudata:open_source,
+        focudata:software_engineering .
+
+focudata:Software_Measurement a focu:course_name ;
+    focu:course_topics focudata:Software_Engineering,
+        focudata:Software_measurement,
+        focudata:project_management,
+        focudata:software_engineering,
+        focudata:software_measurement .
+
+focudata:Software_Project_Management a focu:course_name ;
+    focu:course_topics focudata:ethics,
+        focudata:evolution,
+        focudata:object-oriented,
+        focudata:risk_management,
+        focudata:software_development,
+        focudata:software_engineering .
+
+focudata:Software_Re-engineering a focu:course_name ;
+    focu:course_topics focudata:SOEN,
+        focudata:reengineering,
+        focudata:software_architecture_recovery,
+        focudata:software_metrics,
+        focudata:software_migration .
+
+focudata:Software_Refactoring a focu:course_name ;
+    focu:course_topics focudata:Refactoring,
+        focudata:SOEN,
+        focudata:code_analysis,
+        focudata:evolution,
+        focudata:preventive_maintenance .
+
+focudata:Software_Systems_Requirements_Specification a focu:course_name ;
+    focu:course_topics focudata:Agile,
+        focudata:COMP,
+        focudata:IEEE,
+        focudata:ISO,
+        focudata:Requirements_elicitation,
+        focudata:Requirements_engineering,
+        focudata:Risk_analysis,
+        focudata:Test,
+        focudata:UML,
+        focudata:domain-specific,
+        focudata:evolution,
+        focudata:formal_languages,
+        focudata:formal_specification,
+        focudata:language_documentation,
+        focudata:ontologies,
+        focudata:quality_assurance,
+        focudata:requirements_engineering,
+        focudata:software_lifecycle,
+        focudata:user_stories .
+
+focudata:Software_Verification_and_Testing a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:IEEE,
+        focudata:SOEN,
+        focudata:Test,
+        focudata:Test-driven_development,
+        focudata:black-box_testing,
+        focudata:classical,
+        focudata:dataflow,
+        focudata:formal_verification,
+        focudata:integration_testing,
+        focudata:model_checking,
+        focudata:software_engineering,
+        focudata:system_testing,
+        focudata:test_automation,
+        focudata:test_plan,
+        focudata:theorem_proving,
+        focudata:white-box_testing .
+
+focudata:Statistical_Natural_Language_Processing a focu:course_name ;
+    focu:course_topics focudata:N-gram,
+        <http://focu.io/data#natural_language_processing_(NLP)>,
+        focudata:parsing,
+        focudata:part-of-speech_tagging,
+        focudata:statistical_machine_translation,
+        focudata:word_sense_disambiguation .
+
+focudata:Theory_of_Computation a focu:course_name ;
+    focu:course_topics focudata:Time,
+        focudata:Turing_computable,
+        focudata:Turing_machines,
+        focudata:complexity_measures,
+        focudata:complexity_theory,
+        focudata:recursive_functions,
+        focudata:theorem .
+
+focudata:Topics_in_Computer_Science_I a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:Computer_Science .
+
+focudata:Topics_in_Computer_Science_II a focu:course_name ;
+    focu:course_topics focudata:COMP,
+        focudata:Computer_Science .
+
+focudata:Topics_in_Scientific_Computation a focu:course_name ;
+    focu:course_topics focudata:collocation,
+        focudata:diffusion,
+        focudata:finite_difference_method,
+        focudata:nonlinear,
+        focudata:numerical_methods,
+        focudata:numerical_stability,
+        focudata:ordinary_differential_equations,
+        focudata:partial_differential_equations,
+        focudata:scientific_computation .
+
+focu:course_description a rdf:Property ;
+    rdfs:label "Course Description"@en ;
+    rdfs:comment "Description of the course" ;
+    rdfs:domain focu:course_name ;
+    rdfs:range xsd:string .
+
+focu:course_name_is a rdf:Property ;
+    rdfs:label "Course Name"@en ;
+    rdfs:comment "A name given to the course" ;
+    rdfs:domain focu:Topic,
+        focu:course_name ;
+    rdfs:range xsd:string .
+
+focu:course_number_is a rdf:Property ;
+    rdfs:label "Course number"@en ;
+    rdfs:comment "code of the subject" ;
+    rdfs:domain focu:course_name,
+        focu:grade ;
+    rdfs:range xsd:String .
+
+focu:course_subject a rdf:Property ;
+    rdfs:domain focu:course_name ;
+    rdfs:range xsd:string .
+
+focu:course_topics a rdf:Property ;
+    rdfs:domain focu:course_name ;
+    rdfs:range focu:Topic .
+
+focu:email a rdf:Property ;
+    rdfs:label "Email"@en ;
+    rdfs:comment "Email of the student" ;
+    rdfs:domain focu:Student ;
+    rdfs:range xsd:string .
+
+focu:enrolled_term a rdf:Property ;
+    rdfs:label "term enrolled" ;
+    rdfs:domain focu:course_name ;
+    rdfs:range xsd:string .
+
+focu:generated_topic_link a rdf:Property ;
+    rdfs:label "Generated Topic Link"@en ;
+    rdfs:comment "Sub topic link generated from course description" ;
+    rdfs:domain focu:course_name ;
+    rdfs:range focu:Topic .
+
+focu:grade_score a rdf:Property ;
+    rdfs:domain focu:grade ;
+    rdfs:range xsd:string .
+
+focu:grades_achieved a rdf:Property ;
+    rdfs:domain focu:course_name ;
+    rdfs:range xsd:string .
+
+focu:id_number a rdf:Property ;
+    rdfs:label "ID Number"@en ;
+    rdfs:comment "ID Number of the student" ;
+    rdfs:domain focu:Student ;
+    rdfs:range xsd:string .
+
+focu:isEnrolled a rdf:Property ;
+    rdfs:label "IsEnrolledProperty"@en ;
+    rdfs:comment "A property describing that a Student is enrolled at a University"@en ;
+    rdfs:domain focu:Student ;
+    rdfs:range focu:Course .
+
+focu:student_enrolled a rdf:Property ;
+    rdfs:label "student's id number"@en ;
+    rdfs:domain focu:Student ;
+    rdfs:range focu:course_name .
+
+focu:student_id a rdf:Property ;
+    rdfs:label "student's id number"@en ;
+    rdfs:domain rdf:Student ;
+    rdfs:range xsd:Integer .
+
+focu:student_name a rdf:Property ;
+    rdfs:label "student's name"@en ;
+    rdfs:domain rdf:Course ;
+    rdfs:range xsd:string .
+
+<http://focu.io/data#3D_graphics> a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/3D_computer_graphics> .
+
+focudata:AI a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Artificial_intelligence> .
+
+focudata:Advanced_Encryption_Standard a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Advanced_Encryption_Standard> .
+
+focudata:Agile a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Agile_software_development> .
+
+focudata:Amortized_analysis a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Amortized_analysis> .
+
+focudata:Applied_Artificial_Intelligence a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Applied_Artificial_Intelligence> .
+
+focudata:Bayesian_decision_theory a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Bayes_estimator> .
+
+focudata:Bayesian_inference a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Bayesian_inference> .
+
+focudata:Blogosphere a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Blogosphere> .
+
+focudata:Boolean a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Boolean_algebra> .
+
+focudata:CASE a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer-aided_software_engineering> .
+
+focudata:CORBA a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Common_Object_Request_Broker_Architecture> .
+
+focudata:Client-server a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Client–server_model> .
+
+focudata:Collaborative_Filtering a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Collaborative_filtering> .
+
+focudata:Computational_learning_theory a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computational_learning_theory> .
+
+focudata:Computer_Vision a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer_vision> .
+
+focudata:Continuous_integration a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Continuous_integration> .
+
+focudata:Cryptographic_hash_functions a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Cryptographic_hash_function> .
+
+focudata:Cryptography a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Cryptography> .
+
+focudata:DC a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Direct_current> .
+
+focudata:Data_mining a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Data_mining> .
+
+focudata:Data_warehouse a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Data_warehouse> .
+
+focudata:Delaunay a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Robert_Delaunay> .
+
+focudata:Digital_image_processing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Digital_image_processing> .
+
+focudata:Discrete_Mathematics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Discrete_mathematics> .
+
+focudata:English a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/English_language> .
+
+<http://focu.io/data#Extensible_Markup_Language_(XML)> a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/XML> .
+
+focudata:Extremal_graph_theory a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Extremal_graph_theory> .
+
+focudata:Feature_extraction a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Feature_extraction> .
+
+focudata:Game_engine a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Game_engine> .
+
+focudata:Heuristics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Heuristic> .
+
+focudata:Hough_transform a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Hough_transform> .
+
+focudata:IPv6 a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/IPv6> .
+
+focudata:ISO a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/International_Organization_for_Standardization> .
+
+focudata:Incomplete a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Incomplete_(Backstreet_Boys_song)> .
+
+focudata:Information_Retrieval a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Information_retrieval> .
+
+focudata:Information_integration a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Information_integration> .
+
+focudata:Information_theory a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Information_theory> .
+
+focudata:Intelligent_Systems a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Artificial_intelligence> .
+
+focudata:Internet_Protocol a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Internet_Protocol> .
+
+focudata:Key_distribution a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Key_distribution> .
+
+focudata:Knowledge_representation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Knowledge_representation_and_reasoning> .
+
+focudata:LOD a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Linked_data> .
+
+focudata:Lagrangian_Relaxation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Lagrangian_relaxation> .
+
+focudata:Linked_Open_Data a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Linked_data> .
+
+focudata:MAN a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Metropolitan_area_network> .
+
+focudata:Machine_Learning a focu:Topic,
+        focu:course_name ;
+    focu:course_topics focudata:Computational_learning_theory,
+        focudata:Markov,
+        focudata:Reinforcement_learning,
+        focudata:Support_vector_machines,
+        focudata:Unsupervised_learning,
+        focudata:decision_trees,
+        focudata:deep_belief_networks,
+        focudata:dimensionality_reduction,
+        focudata:dynamical_systems,
+        focudata:expectation_maximization,
+        focudata:instance-based_learning,
+        focudata:k-means,
+        focudata:logistic_regression,
+        focudata:machine_learning,
+        focudata:model_selection,
+        focudata:neural_networks,
+        focudata:overfitting,
+        focudata:polynomial_regression,
+        focudata:principle_component_analysis ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Machine_learning> .
+
+focudata:Markov a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Hidden_Markov_model> .
+
+focudata:Markov_random_field a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Markov_random_field> .
+
+<http://focu.io/data#Model_Driven_Architecture_(MDA)> a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Model-driven_architecture> .
+
+focudata:N-gram a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/N-gram> .
+
+focudata:NP-complete a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/NP-completeness> .
+
+focudata:Network_security a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Network_security> .
+
+focudata:Neumann a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Balthasar_Neumann> .
+
+focudata:Numerical_Analysis a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Numerical_analysis> .
+
+focudata:OLAP a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Online_analytical_processing> .
+
+focudata:Ontologies a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Ontology> .
+
+focudata:OpenCV a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/OpenCV> .
+
+focudata:PAN a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Personal_area_network> .
+
+focudata:Packet_switching a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Packet_switching> .
+
+focudata:PageRank a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/PageRank> .
+
+focudata:Parallel_programming a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Parallel_computing> .
+
+focudata:Pattern_recognition a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Pattern_recognition> .
+
+focudata:Paul_Erdös a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Paul_Erdős> .
+
+focudata:Query_processing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Query_optimization> .
+
+focudata:RDF a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Resource_Description_Framework> .
+
+focudata:RDFS a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/RDF_Schema> .
+
+focudata:RESTful a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Representational_state_transfer> .
+
+focudata:Ramsey a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Ramsey_Abbey> .
+
+focudata:Random_graphs a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Random_graph> .
+
+focudata:Refactoring a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Code_refactoring> .
+
+focudata:Reinforcement_learning a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Reinforcement_learning> .
+
+focudata:Relevance_feedback a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Relevance_feedback> .
+
+focudata:Requirements_elicitation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Requirements_elicitation> .
+
+focudata:Requirements_engineering a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Requirements_engineering> .
+
+<http://focu.io/data#Resource_Description_Framework_(RDF)> a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Resource_Description_Framework> .
+
+focudata:Rijndael a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Advanced_Encryption_Standard> .
+
+focudata:Risk_analysis a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Risk_analysis> .
+
+focudata:SOA a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Service-oriented_architecture> .
+
+focudata:SOAP a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/SOAP> .
+
+focudata:SPARQL a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/SPARQL> .
+
+focudata:Self-documenting_code a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Self-documenting_code> .
+
+focudata:Semantics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Semantics> .
+
+focudata:Service-Oriented_Architecture a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Service-oriented_architecture> .
+
+focudata:Software_configuration_management a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_configuration_management> .
+
+focudata:Software_development a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_development> .
+
+focudata:Software_measurement a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_measurement> .
+
+focudata:String_matching a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/String_searching_algorithm> .
+
+focudata:Support_vector_machines a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Support_vector_machine> .
+
+focudata:TCP a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Transmission_Control_Protocol> .
+
+focudata:Task_analysis a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Task_analysis> .
+
+focudata:Test-driven_development a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Test-driven_development> .
+
+focudata:Text_Mining a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Text_mining> .
+
+focudata:The_Web a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/World_Wide_Web> .
+
+focudata:Time a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Time> .
+
+focudata:Tokenization a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Lexical_analysis> .
+
+focudata:Turing_computable a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computable_function> .
+
+focudata:Turing_machines a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Turing_machine> .
+
+focudata:UDP a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/User_Datagram_Protocol> .
+
+focudata:UML a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Unified_Modeling_Language> .
+
+focudata:Unsupervised_learning a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Unsupervised_learning> .
+
+focudata:User-centered_design a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/User-centered_design> .
+
+focudata:User_interface a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/User_interface> .
+
+focudata:User_interface_design a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/User_interface_design> .
+
+focudata:Van a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Van> .
+
+focudata:Version_control a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Version_control> .
+
+focudata:Voronoi a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Voronoi_diagram> .
+
+<http://focu.io/data#Web_Ontology_Language_(OWL)> a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Web_Ontology_Language> .
+
+focudata:Web_services a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Web_service> .
+
+focudata:Weighting a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Weighting> .
+
+<http://focu.io/data#World_Wide_Web_Consortium_(W3C)> a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/World_Wide_Web_Consortium> .
+
+focudata:access_control a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Access_control> .
+
+focudata:application_architecture a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Applications_architecture> .
+
+focudata:asymptotic_stability a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Lyapunov_stability> .
+
+focudata:authentication a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Authentication> .
+
+focudata:automated_reasoning a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Automated_reasoning> .
+
+focudata:biconvex_optimization a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Biconvex_optimization> .
+
+focudata:bilinear a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Bilinear_form> .
+
+focudata:binary a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Binary_number> .
+
+focudata:black-box_testing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Black-box_testing> .
+
+focudata:blackboard a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Blackboard> .
+
+focudata:business_intelligence a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Business_intelligence> .
+
+focudata:challenge-response_authentication a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Challenge–response_authentication> .
+
+focudata:classical a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Classical_mechanics> .
+
+focudata:cloud_computing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Cloud_computing> .
+
+focudata:code_generation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Automatic_programming> .
+
+focudata:code_optimization a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Program_optimization> .
+
+focudata:code_reuse a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Code_reuse> .
+
+focudata:code_review a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Code_review> .
+
+focudata:cognitive a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Cognition> .
+
+focudata:collocation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Collocation_method> .
+
+focudata:combinatorics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Combinatorics> .
+
+focudata:commodity a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Commodity_computing> .
+
+focudata:communication a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Communication> .
+
+focudata:complexity_measures a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computational_complexity_theory> .
+
+focudata:complexity_theory a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computational_complexity_theory> .
+
+focudata:compositional_semantics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Principle_of_compositionality> .
+
+focudata:computer a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer_science> .
+
+focudata:computer-aided_design a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer-aided_design> .
+
+focudata:computer_aided_design a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer-aided_design> .
+
+focudata:computer_science a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer_science> .
+
+focudata:computer_vision a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer_vision> .
+
+focudata:concurrency_control a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Concurrency_control> .
+
+focudata:confidentiality a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Confidentiality> .
+
+focudata:conflict_resolution a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Conflict_resolution> .
+
+focudata:conjecture a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Conjecture> .
+
+focudata:continuous_optimization a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Continuous_optimization> .
+
+focudata:cryptographic a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Cryptography> .
+
+focudata:cryptography a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Cryptography> .
+
+focudata:data_acquisition a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Data_acquisition> .
+
+focudata:data_integrity a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Data_integrity> .
+
+focudata:database a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Database> .
+
+focudata:dataflow a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Dataflow_programming> .
+
+focudata:debugging a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Debugging> .
+
+focudata:decision_trees a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Decision_tree_learning> .
+
+focudata:deductive_database a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Deductive_database> .
+
+focudata:deep_belief_networks a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Deep_belief_network> .
+
+focudata:design_patterns a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_design_pattern> .
+
+focudata:digital_geometry a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Digital_geometry> .
+
+focudata:dimensionality_reduction a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Dimensionality_reduction> .
+
+focudata:discretization a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Discretization> .
+
+focudata:discriminant a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Discriminant> .
+
+focudata:domain-specific a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Domain-specific_language> .
+
+focudata:dynamic_typing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Type_system> .
+
+focudata:dynamical_systems a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Dynamical_system> .
+
+focudata:e-commerce a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/E-commerce> .
+
+focudata:e-science a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/E-Science> .
+
+focudata:edge_detection a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Edge_detection> .
+
+focudata:encryption a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Public-key_cryptography> .
+
+focudata:energy a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Energy> .
+
+focudata:error_detection a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Error_detection_and_correction> .
+
+focudata:ethics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Ethics> .
+
+focudata:expectation_maximization a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Expectation–maximization_algorithm> .
+
+focudata:expert_systems a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Expert_system> .
+
+focudata:expression a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Gene_expression> .
+
+focudata:fault-tolerant a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Fault_tolerance> .
+
+focudata:feature_extraction a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Feature_extraction> .
+
+focudata:finite-state a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Finite-state_machine> .
+
+focudata:finite_difference_method a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Finite_difference_method> .
+
+focudata:first-order_logic a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/First-order_logic> .
+
+focudata:flow_control a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Control_flow> .
+
+focudata:formal_languages a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Formal_language> .
+
+focudata:formal_methods a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Formal_methods> .
+
+focudata:formal_verification a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Formal_verification> .
+
+focudata:free-form_deformation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Free-form_deformation> .
+
+focudata:frequency_domain a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Frequency_domain> .
+
+focudata:gene a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Gene> .
+
+focudata:geometry a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Geometry> .
+
+focudata:graph a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Graph_theory> .
+
+focudata:graph_colouring a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Graph_coloring> .
+
+focudata:graph_theory a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Graph_theory> .
+
+focudata:heterogeneous_computing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Heterogeneous_computing> .
+
+focudata:heuristic a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Heuristic> .
+
+focudata:high_availability a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer_cluster> .
+
+focudata:histogram a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Histogram> .
+
+focudata:homotopy a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Homotopy> .
+
+focudata:human_computer a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Human_computer> .
+
+focudata:image_compression a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Image_compression> .
+
+focudata:image_enhancement a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Digital_image_processing> .
+
+focudata:image_segmentation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Image_segmentation> .
+
+focudata:inpainting a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Inpainting> .
+
+focudata:instance-based_learning a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Instance-based_learning> .
+
+focudata:integer a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Integer> .
+
+focudata:integration_testing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Integration_testing> .
+
+focudata:interpolation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Interpolation> .
+
+focudata:interprocess_communication a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Inter-process_communication> .
+
+focudata:inverse_kinematics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Inverse_kinematics> .
+
+focudata:k-means a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/K-means_clustering> .
+
+focudata:knowledge_management a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Knowledge_management> .
+
+focudata:language_documentation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Language_documentation> .
+
+focudata:level_set_method a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Level-set_method> .
+
+focudata:lexical_analysis a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Lexical_analysis> .
+
+focudata:link_analysis a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Link_analysis> .
+
+focudata:load_balancing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Weight_distribution> .
+
+focudata:logic a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Logic> .
+
+focudata:logic_programming a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Logic_programming> .
+
+focudata:logistic_regression a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Logistic_regression> .
+
+focudata:massively_parallel a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/MIMD> .
+
+focudata:mesh_generation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Mesh_generation> .
+
+focudata:message-passing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Message_passing> .
+
+focudata:message_passing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Message_passing> .
+
+focudata:mobile_computing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Mobile_computing> .
+
+focudata:mobile_gaming a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Mobile_game> .
+
+focudata:model-theoretic a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Model_theory> .
+
+focudata:model_checking a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Model_checking> .
+
+focudata:model_selection a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Model_selection> .
+
+focudata:morphological a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Shape> .
+
+focudata:motion_control a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Motion_control> .
+
+focudata:motion_planning a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Motion_planning> .
+
+focudata:multi-core a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Multi-core_processor> .
+
+focudata:multi-resolution_analysis a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Multiresolution_analysis> .
+
+focudata:multi-threading a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Thread_(computing)> .
+
+focudata:multicasting a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Multicast> .
+
+focudata:multiple_sequence_alignment a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Multiple_sequence_alignment> .
+
+focudata:natural_language_processing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Natural-language_processing> .
+
+<http://focu.io/data#natural_language_processing_(NLP)> a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Natural-language_processing> .
+
+focudata:non-linear_programming a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Nonlinear_programming> .
+
+focudata:non-repudiation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Non-repudiation> .
+
+focudata:numerical_analysis a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Numerical_analysis> .
+
+focudata:numerical_methods a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Numerical_analysis> .
+
+focudata:numerical_simulation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer_simulation> .
+
+focudata:numerical_stability a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Numerical_stability> .
+
+focudata:object-oriented a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Object-oriented_programming> .
+
+focudata:occlusion_culling a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Hidden_surface_determination> .
+
+focudata:ontology a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Ontology_engineering> .
+
+focudata:open_source a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Open-source_model> .
+
+focudata:ordinary_differential_equations a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Ordinary_differential_equation> .
+
+focudata:overfitting a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Overfitting> .
+
+focudata:parallel_processing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Parallel_computing> .
+
+focudata:parallel_programming a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Parallel_computing> .
+
+focudata:part-of-speech_tagging a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Part-of-speech_tagging> .
+
+focudata:partial_differential_equation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Partial_differential_equation> .
+
+focudata:partial_differential_equations a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Partial_differential_equation> .
+
+<http://focu.io/data#pass/fail> a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Failure> .
+
+focudata:pathfinding a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Pathfinding> .
+
+focudata:pattern_recognition a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Pattern_recognition> .
+
+focudata:photorealism a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Photorealism> .
+
+focudata:phylogeny a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Phylogenetic_tree> .
+
+focudata:physics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Game_physics> .
+
+focudata:plane_sweep a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Sweep_line_algorithm> .
+
+focudata:point_location a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Point_location> .
+
+focudata:polygon_triangulation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Polygon_triangulation> .
+
+focudata:polynomial_regression a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Polynomial_regression> .
+
+focudata:preventive_maintenance a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Preventive_maintenance> .
+
+focudata:principal_component_analysis a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Principal_component_analysis> .
+
+focudata:principle_component_analysis a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Principal_component_analysis> .
+
+focudata:probabilistic_method a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Probabilistic_method> .
+
+focudata:process_model a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_development_process> .
+
+focudata:process_modelling a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Process_modeling> .
+
+focudata:program_comprehension a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Program_comprehension> .
+
+focudata:project_management a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Project_management> .
+
+focudata:quality_assurance a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Quality_assurance> .
+
+focudata:query_expansion a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Query_expansion> .
+
+focudata:range_searching a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Range_searching> .
+
+focudata:recurrent_neural_networks a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Recurrent_neural_network> .
+
+focudata:recursive_functions a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computable_function> .
+
+focudata:reengineering a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Code_refactoring> .
+
+focudata:relational_algebra a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Relational_algebra> .
+
+focudata:relational_calculus a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Relational_calculus> .
+
+focudata:remote_procedure_call a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Remote_procedure_call> .
+
+focudata:requirements_engineering a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Requirements_engineering> .
+
+focudata:risk_management a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Risk_management> .
+
+focudata:robot a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Robotics> .
+
+focudata:schema a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/XML_schema> .
+
+focudata:scientific_computation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computational_science> .
+
+focudata:secondary_structure_prediction a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Protein_structure_prediction> .
+
+focudata:semantics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Semantics> .
+
+focudata:sensor_networks a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Wireless_sensor_network> .
+
+focudata:sequence_alignment a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Sequence_alignment> .
+
+focudata:server a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Web_server> .
+
+focudata:simulated_annealing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Simulated_annealing> .
+
+focudata:software_architecture_recovery a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_architecture_recovery> .
+
+focudata:software_configuration_management a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_configuration_management> .
+
+focudata:software_life-cycle a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_release_life_cycle> .
+
+focudata:software_lifecycle a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_development_process> .
+
+focudata:software_maintenance a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_maintenance> .
+
+focudata:software_measurement a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_measurement> .
+
+focudata:software_metrics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_metric> .
+
+focudata:software_migration a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_modernization> .
+
+focudata:software_visualization a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_visualization> .
+
+focudata:spam_filtering a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Anti-spam_techniques> .
+
+focudata:spline a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Flat_spline> .
+
+focudata:statistical_machine_translation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Statistical_machine_translation> .
+
+focudata:symmetric-key a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Symmetric-key_algorithm> .
+
+focudata:syntax-directed_translation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Syntax-directed_translation> .
+
+focudata:system_testing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/System_testing> .
+
+focudata:temporal_logic a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Temporal_logic> .
+
+focudata:test_automation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Test_automation> .
+
+focudata:test_plan a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Test_plan> .
+
+focudata:text_mining a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Text_mining> .
+
+focudata:theorem_proving a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Automated_theorem_proving> .
+
+focudata:thresholding a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Thresholding_(image_processing)> .
+
+focudata:topology a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Network_topology> .
+
+focudata:traditional_animation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Traditional_animation> .
+
+focudata:travelling_wave a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Wave> .
+
+focudata:triangle a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer_graphics> .
+
+focudata:triangle_mesh a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Triangle_mesh> .
+
+focudata:triangulations a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Polygon_triangulation> .
+
+focudata:type_checking a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Type_system> .
+
+focudata:unit_tests a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Unit_testing> .
+
+focudata:user_stories a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/User_story> .
+
+focudata:variational_methods a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Calculus_of_variations> .
+
+focudata:vector_space a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Vector_space> .
+
+focudata:wavelet a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Wavelet> .
+
+focudata:wavelet_transform a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Wavelet_transform> .
+
+focudata:white-box_testing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/White-box_testing> .
+
+focudata:wide_range a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Fender_Wide_Range> .
+
+focudata:wireless a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Wireless_LAN> .
+
+focudata:word_sense_disambiguation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Word-sense_disambiguation> .
+
+focudata:Applied_Computer_Science a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer_science> .
+
+focudata:Artificial_Intelligence a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Artificial_intelligence> .
+
+focudata:Bioinformatics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Bioinformatics> .
+
+focudata:IEEE a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Institute_of_Electrical_and_Electronics_Engineers> .
+
+focudata:Pattern_Recognition a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Pattern_recognition> .
+
+focudata:Semantic_Web a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Semantic_Web> .
+
+focudata:Service_Oriented_Architecture a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Service-oriented_architecture> .
+
+focudata:Test a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Test_cricket> .
+
+focudata:XML a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/XML> .
+
+focudata:algorithm a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Algorithm> .
+
+focudata:bioinformatics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Bioinformatics> .
+
+focudata:branch-and-bound a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Branch_and_bound> .
+
+focudata:code_analysis a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Static_program_analysis> .
+
+focudata:collision_detection a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Collision_detection> .
+
+focudata:combinatorial a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Combinatorial_optimization>,
+        <http://dbpedia.org/resource/Combinatorics> .
+
+focudata:complexity_analysis a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Analysis_of_algorithms> .
+
+focudata:computer_graphics a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer_graphics> .
+
+focudata:concurrency a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Concurrent_computing>,
+        <http://dbpedia.org/resource/Parallel_computing> .
+
+focudata:convex a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Convex_optimization>,
+        <http://dbpedia.org/resource/Convex_set> .
+
+focudata:data_management a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Data_management> .
+
+focudata:diffusion a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Diffusion_equation> .
+
+focudata:digital a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Digital_data>,
+        <http://dbpedia.org/resource/Digital_electronics> .
+
+focudata:distributed_systems a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Distributed_computing> .
+
+focudata:dynamic_programming a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Dynamic_programming> .
+
+focudata:fault_tolerance a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Fault_tolerance> .
+
+focudata:formal_specification a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Formal_specification> .
+
+focudata:knowledge_representation a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Knowledge_representation_and_reasoning> .
+
+focudata:machine_learning a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Machine_learning> .
+
+focudata:memory a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer_memory> .
+
+focudata:multimedia a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Multimedia> .
+
+focudata:neural_networks a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Artificial_neural_network> .
+
+focudata:ontologies a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Ontology>,
+        <http://dbpedia.org/resource/Upper_ontology> .
+
+focudata:reverse_engineering a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Reverse_engineering> .
+
+focudata:scalability a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Scalability> .
+
+focudata:semantic a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Semantic_Web>,
+        <http://dbpedia.org/resource/Semantics> .
+
+focudata:software_development a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_development> .
+
+focudata:theorem a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Theorem> .
+
+focudata:Computer_Science a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Computer_science> .
+
+focudata:evolution a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Evolution> .
+
+focudata:nonlinear a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Nonlinear_system> .
+
+focudata:optimization a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Mathematical_optimization>,
+        <http://dbpedia.org/resource/Query_optimization> .
+
+focudata:parsing a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Parsing> .
+
+focudata:pipeline a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Graphics_pipeline> .
+
+<http://focu.io/data#3D> a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/3D_computer_graphics>,
+        <http://dbpedia.org/resource/3D_modeling>,
+        <http://dbpedia.org/resource/Three-dimensional_space> .
+
+focudata:Software_Engineering a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_engineering> .
+
+focudata:software_engineering a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Software_engineering> .
+
+focudata:SOEN a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Soen> .
+
+focudata:COMP a focu:Topic ;
+    focu:generated_topic_link <http://dbpedia.org/resource/Cartilage_oligomeric_matrix_protein>,
+        <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> .
+
+focu:course_name a rdf:Class .
+

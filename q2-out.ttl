@@ -1,0 +1,1 @@
+(rdflib.term.Literal('11', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')), rdflib.term.Literal('5', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')), rdflib.term.Literal('18', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))

@@ -1,0 +1,12 @@
+SELECT ?student ?course
+ WHERE{
+ ?student rdf:type focu:Student .
+ ?student foaf:familyName ?lname .
+ ?student foaf:givenName ?fname .
+ ?student focu:student_enrolled ?x .
+ ?x foaf:name ?course .
+ ?course  foaf:name ?cname .
+ FILTER(?lname ="Ghai" && ?fname ="Pulkit")
+
+
+ }

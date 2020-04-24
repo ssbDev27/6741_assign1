@@ -1,0 +1,435 @@
+@prefix dbpedia: <http://dbpedia.org/page/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix focu: <http://focu.io/schema#> .
+@prefix focudata: <http://focu.io/data#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix v: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+focu:Course a rdfs:Class ;
+    rdfs:label "Coursed offered" ;
+    rdfs:comment "Courses" ;
+    rdfs:subClassOf foaf:Topic .
+
+focu:Student a rdfs:Class ;
+    rdfs:label "Student_class"@en ;
+    rdfs:comment "all the students"@en .
+
+<http://focu.io/data#Accounting%Theory> a focu:Course ;
+    focu:Course_Subject "ACCO" ;
+    focu:Course_number "400" ;
+    focu:Description "This course examines the theoretical foundations of the contemporary approach to financial reporting, and the political and pragmatic considerations in the development of the conceptual framework underlying current accounting standards. Alternative theories of accounting are discussed and controversial areas are emphasized." ;
+    focu:Program "Undergraduate" ;
+    foaf:name "Accounting Theory" .
+
+<http://focu.io/data#Accounting%and%Information%Technology> a focu:Course ;
+    focu:course_topics focudata:Information_Technology,
+        focudata:accounting,
+        focudata:computer,
+        focudata:e-business,
+        focudata:systems_analysis .
+
+<http://focu.io/data#Advanced%Assurance%Services> a focu:Course ;
+    focu:Course_Subject "ACCO" ;
+    focu:Course_number "465" ;
+    focu:Description "This course covers important topics and concepts in auditing and assurance services. It builds on audit principles covered in previous courses and introduces specialized and advanced topics that are of particular importance to professional accountants. In covering topics and their application, the course focuses on decision-making processes followed by auditors." ;
+    focu:Program "Undergraduate" ;
+    foaf:name "Advanced Assurance Services" .
+
+focudata:GellerMonica a focu:Student ;
+    focu:student_enrolled [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6751" ;
+            focu:enrolled_term "Winter'20" ;
+            focu:grades_achieved "B+" ;
+            foaf:name <http://focu.io/data#Natural%Language%Analysis> ],
+        [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6791" ;
+            focu:enrolled_term "Winter'20" ;
+            focu:grades_achieved "A-" ;
+            foaf:name <http://focu.io/data#Information%Retrieval%and%Web%Search%> ],
+        [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6721" ;
+            focu:enrolled_term "Summer'20" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Applied%Artificial%Intelligence%> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6281" ;
+            focu:enrolled_term "Fall'19" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Parallel%Programming%> ] ;
+    focu:student_id "45875122" ;
+    v:email "RG@gmail.com" ;
+    foaf:familyName "Geller" ;
+    foaf:givenName "Monica" .
+
+focudata:GhaiPulkit a focu:Student ;
+    focu:student_enrolled [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6231" ;
+            focu:enrolled_term "Fall'19" ;
+            focu:grades_achieved "A-" ;
+            foaf:name <http://focu.io/data#Distributed%System%Design> ],
+        [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6791" ;
+            focu:enrolled_term "Winter'20" ;
+            focu:grades_achieved "A-" ;
+            foaf:name <http://focu.io/data#Information%Retrieval%and%Web%Search%> ],
+        [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6721" ;
+            focu:enrolled_term "Summer'20" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Applied%Artificial%Intelligence%> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6751" ;
+            focu:enrolled_term "Winter'20" ;
+            focu:grades_achieved "B+" ;
+            foaf:name <http://focu.io/data#Natural%Language%Analysis> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6281" ;
+            focu:enrolled_term "Fall'19" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Parallel%Programming%> ] ;
+    focu:student_id "44008969" ;
+    v:email "pg@gmail.com" ;
+    foaf:familyName "Ghai" ;
+    foaf:givenName "Pulkit" .
+
+focudata:HawkJohn a focu:Student ;
+    focu:student_enrolled [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6501" ;
+            focu:enrolled_term "Winter'19" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Programming%Competency%Test> ],
+        [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6461" ;
+            focu:enrolled_term "Winter'19" ;
+            focu:grades_achieved "B-" ;
+            foaf:name <http://focu.io/data#Software%Design%Methodologies> ],
+        [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6761" ;
+            focu:enrolled_term "Winter'19" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Multimedia%Computing> ] ;
+    focu:student_id "12545254" ;
+    v:email "KH@gmail.com" ;
+    foaf:familyName "Hawk" ;
+    foaf:givenName "John" .
+
+focudata:MarksBob a focu:Student ;
+    focu:student_enrolled [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6611" ;
+            focu:enrolled_term "Fall'20" ;
+            focu:grades_achieved "A" ;
+            foaf:name <http://focu.io/data#Software%Measurement> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6331" ;
+            focu:enrolled_term "Fall'20" ;
+            focu:grades_achieved "C" ;
+            foaf:name <http://focu.io/data#Advanced%Game%Development%> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6281" ;
+            focu:enrolled_term "Fall'20" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Parallel%Programming%> ] ;
+    focu:student_id "46851233" ;
+    v:email "BM@gmail.com" ;
+    foaf:familyName "Marks" ;
+    foaf:givenName "Bob" .
+
+<http://focu.io/data#ShiShi%20Yun> a focu:Student ;
+    focu:student_enrolled [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6711" ;
+            focu:enrolled_term "Winter'20" ;
+            focu:grades_achieved "A+" ;
+            foaf:name <http://focu.io/data#Computational%Geometry> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6321" ;
+            focu:enrolled_term "Fall'19" ;
+            focu:grades_achieved "A+" ;
+            foaf:name <http://focu.io/data#Machine%Learning> ] ;
+    focu:student_id "44008970" ;
+    v:email "sys@gmail.com" ;
+    foaf:familyName "Shi" ;
+    foaf:givenName "Shi Yun" .
+
+focudata:SinghFarzi a focu:Student ;
+    focu:student_enrolled [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6281" ;
+            focu:enrolled_term "Fall'20" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Parallel%Programming%> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6231" ;
+            focu:enrolled_term "Fall'19" ;
+            focu:grades_achieved "F" ;
+            foaf:name <http://focu.io/data#Distributed%System%Design> ] ;
+    focu:student_id "44008968" ;
+    v:email "Fs@gmail.com" ;
+    foaf:familyName "Singh" ;
+    foaf:givenName "Farzi" .
+
+focudata:SinghSukhpreet a focu:Student ;
+    focu:student_enrolled [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6721" ;
+            focu:enrolled_term "Summer'20" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Applied%Artificial%Intelligence%> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6231" ;
+            focu:enrolled_term "Fall'19" ;
+            focu:grades_achieved "B+" ;
+            foaf:name <http://focu.io/data#Distributed%System%Design> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6751" ;
+            focu:enrolled_term "Winter'20" ;
+            focu:grades_achieved "A-" ;
+            foaf:name <http://focu.io/data#Natural%Language%Analysis> ],
+        [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6791" ;
+            focu:enrolled_term "Winter'20" ;
+            focu:grades_achieved "A" ;
+            foaf:name <http://focu.io/data#Information%Retrieval%and%Web%Search%> ],
+        [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6321" ;
+            focu:enrolled_term "Summer'20" ;
+            focu:grades_achieved "B+" ;
+            foaf:name <http://focu.io/data#Machine%Learning> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6281" ;
+            focu:enrolled_term "Fall'19" ;
+            focu:grades_achieved "A-" ;
+            foaf:name <http://focu.io/data#Parallel%Programming%> ] ;
+    focu:student_id "44008967" ;
+    v:email "SS@gmail.com" ;
+    foaf:familyName "Singh" ;
+    foaf:givenName "Sukhpreet" .
+
+<http://focu.io/data#Topics%in%Computer%Science%II> a focu:Course ;
+    focu:Course_Subject "COMP" ;
+    focu:Course_number "791" ;
+    focu:Description " Subject matter will vary from term to term and from year to year. Students may re-register for this course, providing that course content has changed. Changes in content will be indicated by the letter following the course number, e.g. COMP 791A, COMP 791B, etc." ;
+    focu:Program "Graduate" ;
+    foaf:name "Topics in Computer Science II" .
+
+focudata:TribbianiJoey a focu:Student ;
+    focu:student_enrolled [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6751" ;
+            focu:enrolled_term "Winter'20" ;
+            focu:grades_achieved "B+" ;
+            foaf:name <http://focu.io/data#Natural%Language%Analysis> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6281" ;
+            focu:enrolled_term "Fall'20" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Parallel%Programming%> ],
+        [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6791" ;
+            focu:enrolled_term "Winter'20" ;
+            focu:grades_achieved "A-" ;
+            foaf:name <http://focu.io/data#Information%Retrieval%and%Web%Search%> ] ;
+    focu:student_id "87545122" ;
+    v:email "Jt@gmail.com" ;
+    foaf:familyName "Tribbiani" ;
+    foaf:givenName "Joey" .
+
+focudata:downAlice a focu:Student ;
+    focu:student_enrolled [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6791" ;
+            focu:enrolled_term "Winter'20" ;
+            focu:grades_achieved "A-" ;
+            foaf:name <http://focu.io/data#Information%Retrieval%and%Web%Search%> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6231" ;
+            focu:enrolled_term "Fall'19" ;
+            focu:grades_achieved "B+" ;
+            foaf:name <http://focu.io/data#Distributed%System%Design> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6751" ;
+            focu:enrolled_term "Winter'20" ;
+            focu:grades_achieved "B+" ;
+            foaf:name <http://focu.io/data#Natural%Language%Analysis> ] ;
+    focu:student_id "44558872" ;
+    v:email "ad@gmail.com" ;
+    foaf:familyName "down" ;
+    foaf:givenName "Alice" .
+
+focudata:foxmegan a focu:Student ;
+    focu:student_enrolled [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6281" ;
+            focu:enrolled_term "Fall'19" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Parallel%Programming%> ],
+        [ focu:Course_Subject "COMP" ;
+            focu:Course_number "6521" ;
+            focu:enrolled_term "Fall'19" ;
+            focu:grades_achieved "A+" ;
+            foaf:name <http://focu.io/data#Advanced%Database%Technology%and%Applications> ] ;
+    focu:student_id "45875821" ;
+    v:email "mf@gmail.com" ;
+    foaf:familyName "fox" ;
+    foaf:givenName "megan" .
+
+focudata:linconkristy a focu:Student ;
+    focu:student_enrolled [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6501" ;
+            focu:enrolled_term "Fall'20" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Programming%Competency%Test> ],
+        [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6461" ;
+            focu:enrolled_term "Fall'20" ;
+            focu:grades_achieved "B-" ;
+            foaf:name <http://focu.io/data#Software%Design%Methodologies> ],
+        [ focu:Course_Subject "SOEN" ;
+            focu:Course_number "6761" ;
+            focu:enrolled_term "Fall'20" ;
+            focu:grades_achieved "B" ;
+            foaf:name <http://focu.io/data#Multimedia%Computing> ] ;
+    focu:student_id "58751236" ;
+    v:email "KL@gmail.com" ;
+    foaf:familyName "lincon" ;
+    foaf:givenName "kristy" .
+
+focu:Course_Subject a rdf:Property ;
+    rdfs:label "Course Programme"@en ;
+    rdfs:domain foaf:Course ;
+    rdfs:range xsd:string .
+
+focu:Course_number a rdf:Property ;
+    rdfs:label "Course Number"@en ;
+    rdfs:domain foaf:Course ;
+    rdfs:range xsd:integer .
+
+focu:Description a rdf:Property ;
+    rdfs:label "Course description"@en ;
+    rdfs:domain foaf:Course ;
+    rdfs:range xsd:string .
+
+focu:Program a rdf:Property ;
+    rdfs:label "ProgramsOffered"@en ;
+    rdfs:comment "Graduate or Undergraduate"@en ;
+    rdfs:domain focu:Course ;
+    rdfs:range xsd:string .
+
+focu:course_topics a rdf:Property ;
+    rdfs:domain focu:Course ;
+    rdfs:range foaf:topic .
+
+focu:enrolled_term a rdf:Property ;
+    rdfs:label "term enrolled" ;
+    rdfs:domain focu:Course ;
+    rdfs:range xsd:string .
+
+focu:grades_achieved a rdf:Property ;
+    rdfs:label "grades"@en ;
+    rdfs:comment "Grades achieved in the course." ;
+    rdfs:domain focu:Course ;
+    rdfs:range xsd:string .
+
+focu:student_enrolled a rdf:Property ;
+    rdfs:label "student's id number"@en ;
+    rdfs:domain focu:Student ;
+    rdfs:range focu:Course .
+
+focu:student_id a rdf:Property,
+        owl:FunctionalProperty ;
+    rdfs:label "student's id number"@en ;
+    rdfs:domain rdf:Student ;
+    rdfs:range xsd:Integer .
+
+foaf:University a foaf:Organization .
+
+focudata:CORBA a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Common_Object_Request_Broker_Architecture> ;
+    foaf:name "CORBA" .
+
+focudata:Client-server a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Clientâ€“server_model> ;
+    foaf:name "Client-server" .
+
+focudata:Information_Technology a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Information_technology> ;
+    foaf:name "Information_Technology" .
+
+focudata:accounting a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Accounting> ;
+    foaf:name "accounting" .
+
+focudata:communication a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Communication> ;
+    foaf:name "communication" .
+
+focudata:computer a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Computer> ;
+    foaf:name "computer" .
+
+focudata:concurrency a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Concurrent_computing> ;
+    foaf:name "concurrency" .
+
+focudata:concurrency_control a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Concurrency_control> ;
+    foaf:name "concurrency_control" .
+
+focudata:distributed_computing a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Distributed_computing> ;
+    foaf:name "distributed_computing" .
+
+focudata:distributed_systems a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Distributed_computing> ;
+    foaf:name "distributed_systems" .
+
+focudata:e-business a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Electronic_business> ;
+    foaf:name "e-business" .
+
+focudata:fault-tolerant a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Fault_tolerance> ;
+    foaf:name "fault-tolerant" .
+
+focudata:fault_tolerance a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Fault_tolerance> ;
+    foaf:name "fault_tolerance" .
+
+focudata:interprocess_communication a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Inter-process_communication> ;
+    foaf:name "interprocess_communication" .
+
+focudata:remote_procedure_call a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Remote_procedure_call> ;
+    foaf:name "remote_procedure_call" .
+
+focudata:scalability a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Scalability> ;
+    foaf:name "scalability" .
+
+focudata:server a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Web_server> ;
+    foaf:name "server" .
+
+focudata:systems_analysis a foaf:topic ;
+    rdf:seeAlso <http://dbpedia.org/resource/Systems_analysis> ;
+    foaf:name "systems_analysis" .
+
+<http://focu.io/data#Distributed%System%Design> a focu:Course ;
+    focu:Course_Subject "COMP" ;
+    focu:Course_number "6231" ;
+    focu:Description " Principles of distributed computing: scalability, transparency, concurrency, consistency, fault tolerance. Client-server interaction technologies: interprocess communication, sockets, group communication, remote procedure call, remote method invocation, object request broker, CORBA, web services. Distributed server design techniques: process replication, fault tolerance through passive replication, high availability through active replication, coordination and agreement transactions and concurrency control. Designing software fault-tolerant highly available distributed systems using process replication. Laboratory: two hours per week." ;
+    focu:Program "Graduate" ;
+    focu:course_topics focudata:CORBA,
+        focudata:Client-server,
+        focudata:communication,
+        focudata:concurrency,
+        focudata:concurrency_control,
+        focudata:distributed_computing,
+        focudata:distributed_systems,
+        focudata:fault-tolerant,
+        focudata:fault_tolerance,
+        focudata:interprocess_communication,
+        focudata:remote_procedure_call,
+        focudata:scalability,
+        focudata:server ;
+    foaf:name "Distributed System Design" .
+

@@ -1,4 +1,4 @@
-Select Distinct ?topic
+Select Distinct ?tname
 WHERE{
 ?x rdf:type focu:Student .
 ?x foaf:givenName ?name .
@@ -6,6 +6,7 @@ WHERE{
 ?x focu:student_enrolled ?y .
 ?y foaf:name ?course.
 ?course focu:course_topics ?topic .
+?topic foaf:name ?tname .
 ?y focu:grades_achieved ?grade .
  FILTER(?name ="Pulkit" || ?lname ="Ghai" || ?grade != "F")
 }
